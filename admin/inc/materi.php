@@ -173,9 +173,9 @@ if(@$_GET['action'] == '') { ?>
                         $nama_file = @$_FILES['materi']['name'];
 
                         if(move_uploaded_file($sumber, $target.$nama_file)) {
-                        	if(@$_SESSION[admin]) {
+                        	if(@$_SESSION['admin']) {
 	                            mysqli_query($db, "INSERT INTO tb_file_materi VALUES('', '$judul', '$kelas', '$mapel', '$nama_file', now(), 'admin', '0')") or die ($db->error);           
-                            } else if(@$_SESSION[pengajar]) {
+                            } else if(@$_SESSION['pengajar']) {
                             	mysqli_query($db, "INSERT INTO tb_file_materi VALUES('', '$judul', '$kelas', '$mapel', '$nama_file', now(), '$_SESSION[pengajar]', '0')") or die ($db->error);
                             }
                             echo '<script>window.location="?page=materi";</script>';

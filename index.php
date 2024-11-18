@@ -88,6 +88,7 @@ $data_terlogin = mysqli_fetch_array($sql_terlogin);
                             <a class="btn btn-sm btn-primary"<?php if(@$_GET['page'] == '') { echo 'class="menu-top-active"'; } ?> href="./">Beranda</a>
                             <a class="btn btn-sm btn-primary"<?php if(@$_GET['page'] == 'quiz') { echo 'class="menu-top-active"'; } ?> href="?page=quiz">Tugas / Quiz</a>
                             <a class="btn btn-sm btn-primary"<?php if(@$_GET['page'] == 'materi') { echo 'class="menu-top-active"'; } ?> href="?page=materi">Materi</a>
+							<a class="btn btn-sm btn-primary"<?php if(@$_GET['page'] == 'nilai') { echo 'class="menu-top-active"'; } ?> href="?page=nilai">Nilai</a>
                             <a class="btn btn-sm btn-primary"<?php if(@$_GET['page'] == 'berita') { echo 'class="menu-top-active"'; } ?> href="?page=berita">Berita</a>
         </div>
     </section>
